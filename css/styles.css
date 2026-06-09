@@ -1,4 +1,6 @@
-/* VARIABLES DE DISEÑO (Colores refinados y técnicos) */
+/* ==========================================================================
+   VARIABLES DE DISEÑO (Estética moderna, limpia y técnica)
+   ========================================================================== */
 :root {
     --oscuro-principal: #0f172a;
     --acento-tablero: #c2410c; 
@@ -7,11 +9,13 @@
     --texto-principal: #334155;
     --texto-suave: #64748b;
     
-    /* Degradados modernos y limpios */
+    /* Degradados geométricos */
     --degradado-tarjeta: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
 
-/* RESET GENERAL */
+/* ==========================================================================
+   RESET Y ESTILOS BASE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +30,7 @@ html {
 body {
     background-color: var(--gris-fondo);
     color: var(--texto-principal);
-    padding-top: 70px;
+    padding-top: 70px; /* Evita que el menú fijo tape el contenido en escritorio */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -35,7 +39,9 @@ h1, h2, h3, .logotipo-stand {
     font-weight: 700;
 }
 
-/* NAVEGACIÓN RESPONSIVA FLUIDA */
+/* ==========================================================================
+   NAVEGACIÓN FIJA (Modo Escritorio Estándar)
+   ========================================================================== */
 .menu-navegacion {
     position: fixed;
     top: 0;
@@ -50,6 +56,7 @@ h1, h2, h3, .logotipo-stand {
     padding: 0 5%;
     box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .logotipo-stand {
@@ -58,6 +65,12 @@ h1, h2, h3, .logotipo-stand {
     letter-spacing: 1px;
 }
 
+.enlaces-secciones {
+    display: flex;
+    align-items: center;
+}
+
+/* Enlaces de navegación */
 .enlaces-secciones a {
     text-decoration: none;
     color: var(--texto-principal);
@@ -71,7 +84,14 @@ h1, h2, h3, .logotipo-stand {
     color: var(--acento-tablero);
 }
 
-/* HERO / PORTADA CON BANCO DE IMÁGENES GRATUITO (foto1 de respaldo/estética) */
+/* Sobreescritura por si quedaron residuos del botón hamburguesa */
+.checkbox-menu, .boton-hamburguesa {
+    display: none !important;
+}
+
+/* ==========================================================================
+   HERO / PORTADA (Imagen de fondo fija con Overlay)
+   ========================================================================== */
 .hero-portada {
     position: relative;
     height: 75vh;
@@ -145,7 +165,9 @@ h1, h2, h3, .logotipo-stand {
     background-color: #a33305;
 }
 
-/* CONTENEDOR MAQUETA */
+/* ==========================================================================
+   ESTRUCTURA DE CONTENEDORES Y SECCIONES
+   ========================================================================== */
 .contenedor-web {
     max-width: 1140px;
     margin: 0 auto;
@@ -154,7 +176,7 @@ h1, h2, h3, .logotipo-stand {
 
 .bloque-seccion {
     padding: 60px 0;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 120px; /* Ajustado para que combine con el menú móvil más alto */
 }
 
 .encabezado-bloque {
@@ -175,7 +197,9 @@ h1, h2, h3, .logotipo-stand {
     line-height: 1.5;
 }
 
-/* REJILLA 1: TARJETAS CON DEGRADADO OSCURO */
+/* ==========================================================================
+   REJILLA 1: TARJETAS CON DEGRADADOS (Fundamentos)
+   ========================================================================== */
 .rejilla-fundamentos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -210,7 +234,9 @@ h1, h2, h3, .logotipo-stand {
     font-weight: 300;
 }
 
-/* CONTENEDOR INTERMEDIO (Usa banco de imágenes gratuito - foto4 de respaldo) */
+/* ==========================================================================
+   BANNER INTERMEDIO (Separador Visual con Imagen)
+   ========================================================================== */
 .banner-separador-visual {
     position: relative;
     width: 100%;
@@ -252,7 +278,9 @@ h1, h2, h3, .logotipo-stand {
     opacity: 0.85;
 }
 
-/* REJILLA 2: VARIANTES (Usa banco de imágenes gratuito - foto2 y foto3 de respaldo) */
+/* ==========================================================================
+   REJILLA 2: VARIANTES (Contenedores con imágenes de fondo individuales)
+   ========================================================================== */
 .rejilla-variantes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -275,11 +303,11 @@ h1, h2, h3, .logotipo-stand {
 }
 
 .t-bg-1 {
-    background: url('../assets/images/Arit-Mate.webp') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1560174038-da43cd745b9b?w=800&auto=format&fit=crop&q=80') center/cover no-repeat;
 }
 
 .t-bg-2 {
-    background: url('../assets/images/tatedrez.jpg') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1586165368502-1bad197a64e1?w=800&auto=format&fit=crop&q=80') center/cover no-repeat;
 }
 
 .capa-tarjeta-variante {
@@ -312,7 +340,9 @@ h1, h2, h3, .logotipo-stand {
     font-weight: 300;
 }
 
-/* SECCIÓN GALERÍA DE FOTOS RESPONSIVA */
+/* ==========================================================================
+   SECCIÓN GALERÍA DE FOTOS LOCALES
+   ========================================================================== */
 .rejilla-galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -351,7 +381,9 @@ h1, h2, h3, .logotipo-stand {
     font-size: 0.95rem;
 }
 
-/* BLOQUE INSTITUCIONAL - SOLUCIÓN TOTAL CORTE FOTO 7 */
+/* ==========================================================================
+   BLOQUE INSTITUCIONAL - SOLUCIÓN DE CORTE PARA FOTO 7
+   ========================================================================== */
 .tarjeta-institucion {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -359,7 +391,7 @@ h1, h2, h3, .logotipo-stand {
     color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    align-items: center; /* Alinea verticalmente el texto y la foto */
+    align-items: center;
 }
 
 .datos-institucion {
@@ -387,10 +419,9 @@ h1, h2, h3, .logotipo-stand {
     opacity: 0.85;
 }
 
-/* El contenedor ahora es elástico y respeta las proporciones de foto7 */
 .contenedor-foto-escuela {
     width: 100%;
-    padding: 20px; /* Separación elegante para que actúe como marco en móviles */
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,13 +429,15 @@ h1, h2, h3, .logotipo-stand {
 
 .contenedor-foto-escuela img {
     width: 100%;
-    height: auto;       /* Escala la altura proporcionalmente */
+    height: auto;
     max-height: 100%;
-    object-fit: contain; /* SE ASEGURA DE QUE SE VEA COMPLETA SIN IMPORTAR EL TAMAÑO */
-    border-radius: 8px; /* Detalle estético para encuadrarla dentro de la tarjeta */
+    object-fit: contain;
+    border-radius: 8px;
 }
 
-/* FOOTER */
+/* ==========================================================================
+   PIE DE PÁGINA
+   ========================================================================== */
 .pie-pagina-sitio {
     background-color: #0b111e;
     color: #94a3b8;
@@ -423,16 +456,20 @@ h1, h2, h3, .logotipo-stand {
     text-transform: uppercase;
 }
 
-/* MEDIAS QUERIES - RESPONSIVE DESIGN SEGURO */
+/* ==========================================================================
+   MEDIA QUERIES - DISEÑO RESPONSIVO SEGURO
+   ========================================================================== */
+
+/* Ajustes intermedios (Tablets y Laptops pequeñas) */
 @media (max-width: 850px) {
     .tarjeta-institucion {
-        grid-template-columns: 1fr; /* Pasa a una sola columna en pantallas chicas */
+        grid-template-columns: 1fr;
     }
     .contenedor-foto-escuela {
         padding: 20px;
     }
     .banner-separador-visual {
-        background-attachment: scroll; 
+        background-attachment: scroll;
         height: 240px;
     }
     .hero-portada {
@@ -440,17 +477,65 @@ h1, h2, h3, .logotipo-stand {
     }
 }
 
+/* ==========================================================================
+   NUEVO MODO MÓVIL: MENÚ FIJO EN DOS FILAS (SIN OCULTAR NADA)
+   ========================================================================== */
 @media (max-width: 768px) {
+    
+    /* El menú crece en altura para albergar las dos líneas sin pisar el contenido */
+    body {
+        padding-top: 110px; 
+    }
+
+    /* Rediseño de la barra: Cambia a flex-direction: column */
+    .menu-navegacion {
+        height: 105px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .logotipo-stand {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    /* Fila de enlaces distribuida horizontalmente de lado a lado */
     .enlaces-secciones {
-        display: none; 
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap; /* Por si las pantallas son extremadamente angostas */
     }
+
+    .enlaces-secciones a {
+        margin-left: 0; /* Eliminamos el margen izquierdo asimétrico */
+        font-size: 0.8rem;
+        padding: 4px 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Ajustes adicionales de espaciados para evitar solapamientos con el Hero */
+    .bloque-presentacion {
+        padding-top: 20px;
+    }
+
     .hero-portada h1 {
-        font-size: 2.2rem; 
+        font-size: 2.1rem;
+        line-height: 1.2;
     }
+
     .contenido-banner-visual h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
+
     .rejilla-variantes {
         grid-template-columns: 1fr;
+    }
+    
+    .bloque-seccion {
+        scroll-margin-top: 120px; /* Evita que el nuevo menú tape los títulos al clickear un enlace */
     }
 }
