@@ -241,7 +241,7 @@ h1, h2, h3, .logotipo-stand {
     position: relative;
     width: 100%;
     height: 300px;
-    background: url('./assets/images/separadorVisual.avif') center/cover no-repeat fixed;
+    background: url('../assets/images/separadorVisual.avif') center/cover no-repeat fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,11 +303,11 @@ h1, h2, h3, .logotipo-stand {
 }
 
 .t-bg-1 {
-    background: url('./assets/images/Arit-Mate.webp') center/cover no-repeat;
+    background: url('../assets/images/Arit-Mate.webp') center/cover no-repeat;
 }
 
 .t-bg-2 {
-    background: url('./assets/images/tatedrez.jpg') center/cover no-repeat;
+    background: url('../assets/images/tatedrez.jpg') center/cover no-repeat;
 }
 
 .capa-tarjeta-variante {
